@@ -19,6 +19,6 @@ if [ ! -e ~/.setup/postgresql ]; then
     sudo -u postgres createuser --superuser $USER &> /dev/null
     sudo -u postgres createdb $USER &> /dev/null
 
-    touch ~/.setup/postgresql
+    mkdir -p ~/.setup && touch ~/.setup/postgresql
 fi
 

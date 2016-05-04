@@ -25,8 +25,8 @@ if [ ! -e ~/taiga-front ]; then
     git clone https://github.com/taigaio/taiga-front-dist.git taiga-front
     pushd ~/taiga-front
     git checkout -f stable
-
-    mv /tmp/conf.json dist/js/
+    echo "current dir: $(pwd)"
+    mv /tmp/conf.json dist/
 
     popd
 else

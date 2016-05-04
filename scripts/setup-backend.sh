@@ -36,9 +36,9 @@ if [ ! -e ~/taiga-back ]; then
     pushd ~/taiga-back
     git checkout -f stable
 
-    # rabbit-create-user-if-needed taiga taiga  # username, password
-    # rabbit-create-vhost-if-needed taiga
-    # rabbit-set-permissions taiga taiga ".*" ".*" ".*" # username, vhost, configure, read, write
+    rabbit-create-user-if-needed taiga taiga  # username, password
+    rabbit-create-vhost-if-needed taiga
+    rabbit-set-permissions taiga taiga ".*" ".*" ".*" # username, vhost, configure, read, write
     mkvirtualenv-if-needed taiga
 
     # Settings
